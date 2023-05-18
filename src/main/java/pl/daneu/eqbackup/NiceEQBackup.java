@@ -19,6 +19,9 @@ public class NiceEQBackup extends JavaPlugin {
     private UserHandler userHandler;
     private BackupInventoriesTask backupInventoriesTask;
 
+    public IDatabase getDatabase(){ return database; }
+    public UserHandler getUserHandler(){ return userHandler; }
+
     @Override
     public void onEnable() {
         saveDefaultConfig();
@@ -47,9 +50,6 @@ public class NiceEQBackup extends JavaPlugin {
         if(database != null && database.getConnection() != null)
             userHandler.getUsers().forEach(database::saveOrPutSync);
     }
-
-    public IDatabase getDatabase(){ return database; }
-    public UserHandler getUserHandler(){ return userHandler; }
 
     public void reloadBackupInventoryTask(){
         backupInventoriesTask.cancel();
