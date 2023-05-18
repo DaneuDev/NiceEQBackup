@@ -1,0 +1,8 @@
+main: pl.daneu.eqbackup.EQBackup
+name: NiceEQBackup
+version: 2.1
+api-version: 1.18
+commands:
+  eqbackup:
+    description: Otwiera panel z backup'ami danego gracza
+    permission: eqbackups.use

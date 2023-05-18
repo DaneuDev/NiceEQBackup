@@ -1,0 +1,13 @@
+main: pl.daneu.eqbackup.NiceEQBackup
+name: NiceEQBackup
+version: 2.1
+api-version: 1.16
+commands:
+  niceeqbackup:
+    description: Open panel with player's backups
+    permission: niceeqbackups.use
+    aliases: nqb
+
+permissions:
+  niceeqbackups.use:
+    description: Allowing a player to use command /niceeqbackup

@@ -1,0 +1,5 @@
+rootProject.name = 'EQBackUp'
+include 'untitled'
+include 'free'
+include 'priced'
+

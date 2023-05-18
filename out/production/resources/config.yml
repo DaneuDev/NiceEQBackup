@@ -1,0 +1,17 @@
+options:
+  max-backups-number: 18 #max 45
+  max-death-backups-number: 18 #max 45
+  save-on-task: true #Zapisuje gracza w bazie danych przy tasku
+  save-on-death: true #Zapisuje gracza w bazie danych przy smierci
+  save-on-panel-save: false #Zapisuje gracza w bazie danych przy zapisie z poziomu panelu
+  save-on-command-save-all: true #Zapisuje graczy w bazie danych przy zapisie wszystkich graczy z poziomu komendy
+
+tasks:
+  backup-period-time: 60 #w sekundach
+
+messages:
+  command:
+    no-permission: "&cNie mozesz uzyc tej komendy! Nie masz permisji" #permisja - 'eqbackups.use'
+    missing-arguments: "&c-> &e/eqbackup <gracz/*>"
+    no-player-like: "&cNie ma takiego gracza jak &e%player%"
+    backup-for-all: "&aPomyslnie wykonales backup'a dla &lwszystkich &agraczy!"

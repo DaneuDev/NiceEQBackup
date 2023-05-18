@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="NiceEQBackup:jar">
+    <output-path>$USER_HOME$/OneDrive/Pulpit/Aplikacje i inne gówna/Bukkity i inne ścierwa/SERVERS/PAPER SERVERS/server 1.18.2/plugins</output-path>
+    <root id="archive" name="NiceEQBackup.jar">
+      <element id="module-output" name="EQBackUp.priced" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/config.yml" />
+    </root>
+  </artifact>
+</component>

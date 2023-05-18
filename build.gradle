@@ -1,0 +1,32 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+    id 'java'
+}
+
+group 'pl.daneu.eqbackup'
+version '1.0'
+
+repositories {
+    mavenCentral()
+
+    maven {
+        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+
+        content {
+            includeGroup 'org.bukkit'
+            includeGroup 'org.spigotmc'
+        }
+    }
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.16.1-R0.1-SNAPSHOT'
+    shadow 'com.zaxxer:HikariCP:4.0.3'
+}
+
+shadowJar {
+    configurations = [project.configurations.shadow]
+    archiveFileName.set("NiceEQBackup.jar")
+    destinationDirectory.set(new File("C:\\Users\\kapru\\OneDrive\\Pulpit\\Aplikacje i inne gówna\\Bukkity i inne ścierwa\\SERVERS\\PAPER SERVERS\\server 1.18.2\\plugins"))
+    //destinationDirectory.set(new File("C:\\Users\\kapru\\OneDrive\\Pulpit\\Aplikacje i inne gówna\\Bukkity i inne ścierwa\\SERVERS\\PAPER SERVERS\\server 1.18.2\\plugins"))
+}

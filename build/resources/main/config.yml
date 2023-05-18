@@ -1,0 +1,77 @@
+database:
+  type: mysql # You can choose only between mysql or sqlite
+
+  ### Only if you are using MySQL ###
+  host: localhost
+  port: 3306
+  database-name: test
+  username: root
+  password: 123
+
+options:
+  max-backups-number: 18 # max store of backups (max. 45)
+  max-death-backups-number: 18 # max store of death backups (max. 45)
+  save-on-task: true # Saving player to database on task
+  save-on-death: false # Saving player to database on death
+  save-on-panel-save: false # Saving player to database on clicking at button in panel
+  save-on-command-save-all: true # Saving all players to database on command /niceeqbackups *
+
+tasks:
+  backup-period-time: 60 # In seconds
+
+command:
+  no-permission: '&cYou cannot use that command! No permission &e<niceeqbackups.use>'
+  missing-arguments: '&c-> &e/niceeqbackup <player-name/*/reload>'
+  no-player-like: '&cThere is no player like &e%player%'
+  backup-for-all: '&aYou did successful backups for &lall players!'
+
+guis:
+  panel:
+    title: '&7Panel of player &6%player%'
+    items:
+      backups-list:
+        name: '&6List of backups'
+        lore:
+          - ''
+          - '&7Amount of EQ backups: &6&l%backups% &8&l| &7Amount of death backups:
+          &6&l%death-backups%'
+          - '   &6LPM &7Go to EQ backups &8&l| &6PPM &7Go to death backups'
+      do-backup:
+        name: '&6Save current EQ'
+        lore:
+          - ''
+          - '&7Click to save current EQ'
+    messages:
+      player-offline: '&cYou cannot create a backup, because player is offline'
+      succeed: '&aCreated a backup for player &a&l%player%'
+  backups-list:
+    title: '&7List of backups'
+    death-title: '&7List of &4death backups'
+    items:
+      backup:
+        name: '&6Backup number %number%'
+        lore:
+          - '&7Create time: &6%time%'
+          - ''
+          - '                           &6LPM &7See EQ &8&l| &6PPM &7See EnderChest'
+          - '&6SHIFT+LPM &7Give EQ backup to the player &8&l| &6SHIFT+PPM &7Give EnderChest
+          backup to the player'
+          - '                             &6MIDDLE &7Delete backup'
+      go-back:
+        name: '&cGo back to panel'
+    messages:
+      give-eq-player-offline: '&cPlayer is currently offline. You cannot give him EQ backup'
+      give-eq-succeed: '&aYou give EQ backup for &a&l%player% &afrom time &a&l%time%'
+      give-ec-player-offline: '&cPlayer is currently offline. You cannot give him
+        EnderChest backup'
+      give-ec-succeed: '&aYou give EnderChest backup for &a&l%player% &afrom time
+        &a&l%time%'
+      delete: '&aYou delete backup of player &a&l%player% &afrom time &a&l%time%'
+  backup-showcase:
+    eq-title: '&3Inventory &7- &7&l%time%'
+    ec-title: '&dEnderChest &7- &7&l%time%'
+    items:
+      exp:
+        name: '&7Level: %level%, To next level (precentage): %exp-to-level%%'
+      go-back:
+        name: '&cGo back to list of backups'
