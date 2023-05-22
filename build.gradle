@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'pl.daneu.eqbackup'
-version '1.0'
+version '2.2'
 
 repositories {
     mavenCentral()
@@ -26,7 +26,7 @@ dependencies {
 
 shadowJar {
     configurations = [project.configurations.shadow]
-    archiveFileName.set("NiceEQBackup.jar")
+    archiveFileName.set("NiceEQBackup-" + getVersion() + ".jar")
     destinationDirectory.set(new File("C:\\Users\\kapru\\OneDrive\\Pulpit\\Aplikacje i inne gówna\\Bukkity i inne ścierwa\\SERVERS\\PAPER SERVERS\\server 1.18.2\\plugins"))
     //destinationDirectory.set(new File("C:\\Users\\kapru\\OneDrive\\Pulpit\\Aplikacje i inne gówna\\Bukkity i inne ścierwa\\SERVERS\\PAPER SERVERS\\server 1.18.2\\plugins"))
 }

@@ -22,10 +22,14 @@ public class BackupInventoriesTask extends BukkitRunnable {
 
     @Override
     public void run() {
-        userHandler.getUsers().forEach(u -> {
-            Player p = Bukkit.getPlayer(u.getUUID());
+        userHandler.getUsers().forEach((uuid, u) -> {
+            Player p = Bukkit.getPlayer(uuid);
 
-            if(p == null) return;
+            if(p == null){
+                database.saveOrPut(u);
+                userHandler.removeUser(uuid);
+                return;
+            }
 
             u.addBackup(p, Backup.BackupType.ALIVE);
 

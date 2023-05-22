@@ -48,7 +48,7 @@ public class NiceEQBackup extends JavaPlugin {
     @Override
     public void onDisable() {
         if(database != null && database.getConnection() != null)
-            userHandler.getUsers().forEach(database::saveOrPutSync);
+            userHandler.getUsers().values().forEach(database::saveOrPutSync);
     }
 
     public void reloadBackupInventoryTask(){
@@ -61,7 +61,7 @@ public class NiceEQBackup extends JavaPlugin {
 
     public void reloadDatabase(){
         if(database != null && database.getConnection() != null)
-            userHandler.getUsers().forEach(database::saveOrPutSync);
+            userHandler.getUsers().values().forEach(database::saveOrPutSync);
         userHandler.getUsers().clear();
 
         if(!initDatabase()) {
