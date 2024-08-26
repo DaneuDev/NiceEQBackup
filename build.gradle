@@ -1,32 +1,33 @@
 plugins {
-    id 'com.github.johnrengelman.shadow' version '7.1.2'
     id 'java'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
 }
 
-group 'pl.daneu.eqbackup'
-version '2.2'
+group = 'pl.daneu.niceeqbackup'
+version = '2.4'
 
 repositories {
     mavenCentral()
 
     maven {
-        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
-
-        content {
-            includeGroup 'org.bukkit'
-            includeGroup 'org.spigotmc'
+        url "https://maven.pkg.jetbrains.space/daneu/p/daneudev/daneutools"
+        credentials {
+            username = spaceUsername
+            password = spacePassword
         }
     }
+
+    maven { url = uri("https://repo.papermc.io/repository/maven-public/") }
 }
 
 dependencies {
-    compileOnly 'org.spigotmc:spigot-api:1.16.1-R0.1-SNAPSHOT'
-    shadow 'com.zaxxer:HikariCP:4.0.3'
+    implementation "pl.daneu.daneutools:DaneuTools:1.91"
+
+    compileOnly("io.papermc.paper:paper-api:1.20-R0.1-SNAPSHOT")
 }
 
-shadowJar {
-    configurations = [project.configurations.shadow]
-    archiveFileName.set("NiceEQBackup-" + getVersion() + ".jar")
-    destinationDirectory.set(new File("C:\\Users\\kapru\\OneDrive\\Pulpit\\Aplikacje i inne gówna\\Bukkity i inne ścierwa\\SERVERS\\PAPER SERVERS\\server 1.18.2\\plugins"))
-    //destinationDirectory.set(new File("C:\\Users\\kapru\\OneDrive\\Pulpit\\Aplikacje i inne gówna\\Bukkity i inne ścierwa\\SERVERS\\PAPER SERVERS\\server 1.18.2\\plugins"))
+shadowJar{
+    compileJava.options.encoding = 'UTF-8'
+    destinationDirectory = new File("E:\\Minecraft\\Servers\\1.20\\plugins")
+    archiveFileName = "NiceEQBackup-" + getArchiveVersion().get() + ".jar"
 }

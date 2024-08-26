@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/EQBackUp.main.iml" filepath="$PROJECT_DIR$/.idea/modules/EQBackUp.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/NiceEQBackup.iml" filepath="$PROJECT_DIR$/.idea/modules/NiceEQBackup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/NiceEQBackup.main.iml" filepath="$PROJECT_DIR$/.idea/modules/NiceEQBackup.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/NiceEQBackup.test.iml" filepath="$PROJECT_DIR$/.idea/modules/NiceEQBackup.test.iml" />
     </modules>
   </component>
 </project>

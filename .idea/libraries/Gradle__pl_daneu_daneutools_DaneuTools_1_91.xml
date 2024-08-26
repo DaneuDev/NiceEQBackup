@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: pl.daneu.daneutools:DaneuTools:1.91" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="pl.daneu.daneutools" artifactId="DaneuTools" version="1.91" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/pl.daneu.daneutools/DaneuTools/1.91/f95766e4a939736fa5788b17d244b9503399370/DaneuTools-1.91.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
